@@ -1,0 +1,26 @@
+#N canvas 958 85 959 994 10;
+#X obj 109 183 dac~;
+#X msg 109 41 open sounds/guitar.wav;
+#X msg 109 66 start;
+#X msg 115 86 stop;
+#X obj 104 132 readsf~;
+#X obj 303 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 301 62 random 2;
+#X floatatom 346 26 5 0 0 0 - - -;
+#X floatatom 439 127 5 0 0 0 - - -;
+#X obj 300 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 321 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 300 106 sel 0 1;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 0 11 0;
+#X connect 7 0 6 1;
+#X connect 11 0 9 0;
+#X connect 11 1 10 0;
