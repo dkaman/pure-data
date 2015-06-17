@@ -1,0 +1,15 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/webpd-latest.min.js"></script>
+    <script>
+        var patch
+        $.get('patches/osc1.pd', function(patchStr) {
+          patch = Pd.loadPatch(patchStr)
+          Pd.start()
+        })
+    </script>
+  </head>
+  <body></body>
+</html>
