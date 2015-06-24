@@ -1,9 +1,9 @@
-#N canvas 957 85 958 994 10;
+#N canvas 553 18 958 700 10;
 #X obj 89 285 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 147 287 open sounds/techloop.wav;
 #X msg 294 286 open sounds/guitar.wav;
-#N canvas 135 168 297 400 rmix2f 0;
+#N canvas 135 168 297 400 rmix2f 1;
 #X obj 192 209 -;
 #X msg 192 182 1 \$1;
 #X floatatom 192 157 5 0 0 0 - - -;
@@ -47,29 +47,27 @@
 #X msg 138 85 open sounds/techloop.wav;
 #X obj 113 188 dac~;
 #X msg 195 122 open sounds/guitar.wav;
-#N canvas 185 516 381 376 rsel2f 0;
-#X msg 190 -60 start;
-#X obj 181 24 readsf~;
+#N canvas 423 188 381 376 rsel2f 1;
+#X msg 190 -87 start;
+#X obj 181 -3 readsf~;
 #X obj 60 -246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 60 -188 random 2;
-#X floatatom 114 -162 5 0 0 0 - - -;
-#X obj 60 -131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 60 -215 random 2;
+#X floatatom 114 -189 5 0 0 0 - - -;
+#X obj 60 -158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 106 -111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 106 -138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 60 -160 sel 0 1;
-#X msg 60 -81 start;
-#X obj 60 -41 readsf~;
-#X msg 159 -157 0;
-#X obj 60 -217 trigger bang bang;
-#X obj 256 -31 inlet;
-#X obj 123 -69 inlet;
+#X obj 60 -187 sel 0 1;
+#X msg 60 -108 start;
+#X obj 60 -68 readsf~;
+#X obj 256 -58 inlet;
+#X obj 123 -96 inlet;
 #X obj 60 -288 inlet;
-#X obj 61 34 outlet~;
+#X obj 61 7 outlet~;
 #X connect 0 0 1 0;
-#X connect 1 0 15 0;
-#X connect 2 0 11 0;
+#X connect 1 0 13 0;
+#X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X connect 3 0 7 0;
 #X connect 5 0 8 0;
@@ -77,13 +75,13 @@
 #X connect 7 0 5 0;
 #X connect 7 1 6 0;
 #X connect 8 0 9 0;
-#X connect 9 0 15 0;
-#X connect 11 0 3 0;
-#X connect 11 1 10 0;
-#X connect 12 0 1 0;
-#X connect 13 0 9 0;
-#X connect 14 0 2 0;
+#X connect 9 0 13 0;
+#X connect 10 0 1 0;
+#X connect 11 0 9 0;
+#X connect 12 0 2 0;
 #X restore 84 139 pd rsel2f;
+#N canvas 820 118 450 300 skipps 0;
+#X restore 336 478 pd skipps;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
 #X connect 2 0 3 2;
