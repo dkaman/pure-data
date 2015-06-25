@@ -1,9 +1,9 @@
-#N canvas 553 18 958 700 10;
+#N canvas 0 0 373 670 10;
 #X obj 89 285 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X msg 147 287 open sounds/techloop.wav;
 #X msg 294 286 open sounds/guitar.wav;
-#N canvas 135 168 297 400 rmix2f 1;
+#N canvas 135 168 297 400 rmix2f 0;
 #X obj 192 209 -;
 #X msg 192 182 1 \$1;
 #X floatatom 192 157 5 0 0 0 - - -;
@@ -46,8 +46,7 @@
 -1;
 #X msg 138 85 open sounds/techloop.wav;
 #X obj 113 188 dac~;
-#X msg 195 122 open sounds/guitar.wav;
-#N canvas 423 188 381 376 rsel2f 1;
+#N canvas 423 188 381 376 rsel2f 0;
 #X msg 190 -87 start;
 #X obj 181 -3 readsf~;
 #X obj 60 -246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -82,13 +81,14 @@
 #X restore 84 139 pd rsel2f;
 #N canvas 820 118 450 300 skipps 0;
 #X restore 336 478 pd skipps;
+#X msg 195 122 open sounds/excuseme.wav;
 #X connect 0 0 3 0;
 #X connect 1 0 3 1;
 #X connect 2 0 3 2;
 #X connect 3 0 4 0;
 #X connect 3 0 4 1;
-#X connect 5 0 9 0;
-#X connect 6 0 9 1;
-#X connect 8 0 9 2;
-#X connect 9 0 7 0;
-#X connect 9 0 7 1;
+#X connect 5 0 8 0;
+#X connect 6 0 8 1;
+#X connect 8 0 7 0;
+#X connect 8 0 7 1;
+#X connect 10 0 8 2;
